@@ -8,10 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="author" content="Grayrids">
   <title>WikMídia - Tudo sobre multimídia</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
   <link rel="shortcut icon" href="imagens/favicon.ico">
-
-  
-
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome CSS -->
   <link rel="stylesheet" href="fonts/font-awesome.min.css" type="text/css" media="screen">
@@ -23,6 +23,7 @@
   <link href="css/animate.min.css" rel="stylesheet">
   <link href="estilo.css" rel="stylesheet">
   <link href="css/icone.css" rel="stylesheet">
+  <link href="css/carssel.css" rel="stylesheet">
 </head>
 
 <body>
@@ -326,11 +327,13 @@
             </div>
           </div>
         </div>
-
+        <div class="socialico ">
+          <a href="#audioDesc" class="infor socialbtn"> <i class="fa fa-info" aria-hidden="true"></i>  informações</a>
+        </div>
       </div>
     </section>
 
-    <section id="main-features" class="section main-feature-gray">
+    <section id="audioDesc" class="section main-feature-gray">
       <div class="container">
 
 
@@ -358,12 +361,15 @@
         <div class="section-header">
           <h1 class="section-title wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Animação e Jogos</h1>
         </div>
+        <div class="socialico ">
+          <a href="#animaDesc" class="infor socialbtn"> <i class="fa fa-info" aria-hidden="true"></i>  informações</a>
+        </div>
       </div>
 
     </section>
 
 
-    <section id="other-features">
+    <section id="animaDesc">
       <div class="container">
         <div class="section-header">
           <h1 class="section-title wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Other Features</h1>
@@ -454,61 +460,191 @@
       </div>
     </section>
 
+    <!--div class="wrap">
+                <div class="carousel">
+                  <div class="group">
+                    <input type="radio" name="test" id="0" value="0">
+                    <label for="4" class="previous fa fa-arrow-circle-left"></label>
+                    <label for="1" class="next fa fa-arrow-circle-right"></label>
+                    <div class="content">
+                      <img src="imagens/carrossel/carAnt.jpg" style="width:100%">
+                      <div class="carousel-caption">
+                        <h3>Carro Antigo</h3>
+                        <p>We love the Big Apple!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group">
+                    <input type="radio" name="test" id="1" value="1">
+                    <label for="0" class="previous fa fa-arrow-circle-left"></label>
+                    <label for="2" class="next fa fa-arrow-circle-right"></label>
+                    <div class="content">
+                      <img src="imagens/carrossel/carAtual.jpg" style="width:100%">
+                      <div class="carousel-caption">
+                        <h3>Carro Atual</h3>
+                        <p>We love the Big Apple!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group">
+                    <input type="radio" name="test" id="2" value="2">
+                    <label for="1" class="previous fa fa-arrow-circle-left"></label>
+                    <label for="3" class="next fa fa-arrow-circle-right"></label>
+                    <div class="content">
+                      <img src="imagens/carrossel/carFut.jpg" style="width:100%">
+                      <div class="carousel-caption">
+                        <h3>Carro do Futuro</h3>
+                        <p>We love the Big Apple!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group">
+                    <input type="radio" name="test" id="3" value="3" checked="">
+                    <label for="2" class="previous fa fa-arrow-circle-left"></label>
+                    <label for="4" class="next fa fa-arrow-circle-right"></label>
+                    <div class="content">
+                      <img src="imagens/carrossel/carAtual.jpg" style="width:100%">
+                      <div class="carousel-caption">
+                        <h3>Carro Atual</h3>
+                        <p>We love the Big Apple!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group">
+                    <input type="radio" name="test" id="4" value="4">
+                    <label for="3" class="previous fa fa-arrow-circle-left"></label>
+                    <label for="0" class="next fa fa-arrow-circle-right"></label>
+                    <div class="content">
+                      <img src="imagens/carrossel/carFut.jpg" style="width:100%">
+                      <div class="carousel-caption">
+                        <h3>Carro do Futuro</h3>
+                        <p>We love the Big Apple!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div-->
+
+
     <section id="testimonial" class="section">
+      <div class="container">
 
-        <div class="container">
-            <h2>Carousel Example</h2>
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-              </ol>
-          
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner">
-          
-                <div class="item active">
-                    <img src="imagens\carrossel\carAnt.jpg" alt="Carro Antigo" style="width:100%;">
-                  <div class="carousel-caption">
-                    <h3>Los Angeles</h3>
-                    <p>LA is always so much fun!</p>
+        <!-- Carousel -->
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6">
+                <h2>Imagens</h2>
+                <div class=" wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
+                    <div id="t-carousel" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#t-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#t-carousel" data-slide-to="1"></li>
+                        <li data-target="#t-carousel" data-slide-to="2"></li>
+                        <li data-target="#t-carousel" data-slide-to="3"></li>
+                        <li data-target="#t-carousel" data-slide-to="4"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                        <div class="item active text-center">
+                            <img src="imagens/carrossel/carAnt.jpg" style="width:100%">
+                            <div class="carousel-caption">
+                              <h3>Carro Antigo</h3>
+                              <p>We love the Big Apple!</p>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <img src="imagens/carrossel/carAtual.jpg" style="width:100%">
+                            <div class="carousel-caption">
+                              <h3>Carro Atual</h3>
+                              <p>We love the Big Apple!</p>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <img src="imagens/carrossel/carFut.jpg" style="width:100%">
+                            <div class="carousel-caption">
+                              <h3>Carro do Futuro</h3>
+                              <p>We love the Big Apple!</p>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <img src="imagens/carrossel/ant3.jpg" style="width:100%">
+                            <div class="carousel-caption">
+                              <h3>Opala Antigo</h3>
+                              <p>We love the Big Apple!</p>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <img src="imagens/carrossel/ant1.jpg" style="width:100%">
+                            <div class="carousel-caption">
+                              <h3>Bicicleta Antiga</h3>
+                              <p>We love the Big Apple!</p>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-          
-                <div class="item">
-                    <img src="imagens\carrossel\carFut.jpg" alt="Carro do Futuro" style="width:80%;">
-                  <div class="carousel-caption">
-                    <h3>Chicago</h3>
-                    <p>Thank you, Chicago!</p>
+            </div> 
+            <div class="col-md-6">
+                <h2>Desenho</h2>
+                <div class=" wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
+                    <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#testimonial-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#testimonial-carousel" data-slide-to="1"></li>
+                        <li data-target="#testimonial-carousel" data-slide-to="2"></li>
+                        <li data-target="#testimonial-carousel" data-slide-to="3"></li>
+                        <li data-target="#testimonial-carousel" data-slide-to="4"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                        <div class="item active text-center">
+                            <img src="imagens/carrossel/ant2.jpg" style="width:100%">
+                            <div class="carousel-caption">
+                              <h3>Foto Alunos Antiga</h3>
+                              <p>We love the Big Apple!</p>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <img src="imagens/carrossel/vet1.jpg" style="width:100%">
+                            <div class="carousel-caption">
+                              <h3>Vetor Águia</h3>
+                              <p>We love the Big Apple!</p>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <img src="imagens/carrossel/vet2.jpg" style="width:100%">
+                            <div class="carousel-caption">
+                              <h3>Vetor Árvore</h3>
+                              <p>We love the Big Apple!</p>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <img src="imagens/carrossel/ant4.jpg" style="width:100%">
+                            <div class="carousel-caption">
+                              <h3>Foto Família Antiga</h3>
+                              <p>We love the Big Apple!</p>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <img src="imagens/carrossel/vet3.jpg" style="width:100%">
+                            <div class="carousel-caption">
+                              <h3>Desenho Minie</h3>
+                              <p>We love the Big Apple!</p>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              
-                <div class="item">
-                    <img src="imagens\carrossel\carAtual.jpg" alt="Carro Atual" style="width:100%;">
-                  <div class="carousel-caption">
-                    <h3>New York</h3>
-                    <p>We love the Big Apple!</p>
-                  </div>
-                </div>
-            
-              </div>
-          
-              <!-- Left and right controls -->
-              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="fa fa-backward"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="fa fa-forward"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
+            </div> 
           </div>
-</section>
+        </div>
+        <div class="socialico ">
+          <a href="#imagemDesc" class="infor socialbtn"> <i class="fa fa-info" aria-hidden="true"></i>  informações</a>
+        </div>
+      </div>
+    </section>
 
-    <section id="other-features">
+    <section id="imagemDesc">
       <div class="container">
         <div class="section-header">
           <h1 class="section-title wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Other Features</h1>
@@ -645,6 +781,9 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="socialico ">
+          <a href="#videoDesc" class="infor socialbtn"> <i class="fa fa-info" aria-hidden="true"></i>  informações</a>
         </div>
       </div>
     </section>
@@ -786,6 +925,9 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="socialico ">
+          <a href="#hipermidiaDesc" class="infor socialbtn"> <i class="fa fa-info" aria-hidden="true"></i>  informações</a>
         </div>
       </div>
     </section>
@@ -946,10 +1088,13 @@
             </div>
           </div>
         </div>
+        <div class="socialico ">
+          <a href="#quizDesc" class="infor socialbtn"> <i class="fa fa-info" aria-hidden="true"></i>  informações</a>
+        </div>
       </div>
     </section>
 
-    <section id="quizDes">
+    <section id="quizDesc">
       <div class="container">
         <div class="section-header">
           <h1 class="section-title wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Quiz Multimidia</h1>
@@ -1148,8 +1293,7 @@
     <script src="js/smooth-on-scroll.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
-    <!--script src="js/jquery.min.js"></script-->
-    
+
     <script type="text/javascript">
       var oldAud = null;
       var oldbtn = null;
@@ -1209,7 +1353,7 @@
         var audio = document.getElementById("myAudio");
         audio.currentTime += value;
       }*/
-</script>
+    </script>
     <script>
       $(document).ready(function () {
         // This command is used to initialize some elements and make them work properly
@@ -1219,5 +1363,3 @@
 </body>
 
 </html>
-
-else { oldAud = audio; oldAud.pause(); audio.play(); }

@@ -62,6 +62,21 @@
     width:350px;
   }
 
+  .infor{
+    color: #fff;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 10px;
+    border: 1px solid #6495ED;
+    border-radius:16px;
+    background-color: #6495ED;
+    position: relative;
+    left: 50%;
+    margin-left: -100px; /* A metade de sua largura. */
+  }
+
+
   /*reset*/
 *{
   margin: 0;
