@@ -76,7 +76,6 @@
     margin-left: -100px; /* A metade de sua largura. */
   }
 
-
   /*reset*/
 *{
   margin: 0;
@@ -112,6 +111,30 @@ clear: both;
 width: 100%;
 text-align: center;
 }
+
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+li{
+  font-size: 15px;
+  font-weight: bolder;
+  margin: 0px 0px 0px 50px; 
+}
+
+h4{
+  font-weight: bolder;
+}
+
+.desc{
+    background-color: transparent;
+    text-align:left;
+    border: 1px solid;
+    border-color:#222;
+   }
+
 
 /*
   .social {

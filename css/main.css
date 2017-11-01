@@ -38,7 +38,7 @@ a:hover,
 a:focus {
   text-decoration: none;
   outline: none;
-  color: #fff;
+  color: #EEB422;
 }
 .section {
   padding: 90px 0;
@@ -767,8 +767,8 @@ a:focus {
   border-color: #697e88;
 }
 #testimonial .carousel-indicators .active {
-  background-color: #fff;
-  border-color: #fff;
+  background-color: red;
+  border-color: red;
 }
 #counter {
   background: #ecf0f1;
