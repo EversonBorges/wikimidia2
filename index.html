@@ -7,6 +7,12 @@
   <meta name="keywords" content="Bootstrap, Landing page, Template, Registration, Landing">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="author" content="Grayrids">
+
+  <!--JOGO 2048-->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+
   <title>WikMídia - Tudo sobre multimídia</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -24,6 +30,10 @@
   <link href="estilo.css" rel="stylesheet">
   <link href="css/icone.css" rel="stylesheet">
   <link href="css/carssel.css" rel="stylesheet">
+
+  <!--INICIO JOGO 2048-->
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
@@ -345,11 +355,46 @@
           <p>A fala e a sequência musical são os dois tipos de áudio mais utilizados nas aplicações multimídias.</p>
           <p>O áudio digital pode ser utilizado multimédia, mas assume uma relevância particular em outras duas áreas de aplicação:
             telecomunicações e entretenimentos.s</p>
+          <p> Foi no século XIX, mais precisamente em 1877 que o inventor da lâmpada e do telégrafo, Thomas Edson, conseguiu
+            a primeira gravação da voz humana quando a frase Mary tinha uma carneirinho, foi gravada em um fonógrafo de cilindros.
+            Este arcaico aparelho era rodado à mão e captava o som através de um cone, que fazia vibrar um diafragma. Este
+            era ligado por um estilete ao cilindro, que gravava fisicamente as vibrações sonoras fazendo pequenos sulcos
+            no alumínio.</p>
+
+          <p>A gravação magnética só apareceu em 1898, criada pelo dinamarquês Valdemar Poulsen. Para isso, era utilizado um
+            fio de aço como meio de gravação, que através de ondas eletromagnéticas codificava uma fita de plástico com óxido
+            magnético.
+          </p>
+
+          <p>Em 1920 foi inaugurada a primeira rádio comercial a KDKA em Pittsburgh. A partir de então, às gravações já podiam
+            ser levadas às massas. A difusão sonora pelas ondas do rádio mostrou-se grande aliada na divulgação musical e
+            aqueceu o mercado.</p>
+
+          <p>A empresa Magnecor criou então o primeiro gravador de fita cassete estéreo, adicionando uma Segunda cabeça ao seu
+            gravador de fita PT-6 mono, em 1949. </p>
+
+          <p>A grande revolução só veio acontecer quando em 1979 a Sony lançou o Walkman. O pequeno rádio toca-fitas portátil
+            tornou-se uma febre entre os jovens e foi um grande sucesso de vendas.</p>
+
+          <p>No final dos anos 70 a gravação em fita DAT passou a ser empregada nos estúdios de gravação. Depois de armazenadas
+            em DAT as músicas eram gravadas em LPs e cassetes.</p>
+
+          <p>O sucesso do CD veio rápido e em 1988 a venda desta mídia digital ultrapassou a venda dos velhos LPs.</p>
+
+          <p>Nos dias atuais O computador, a TV, a Internet e o próprio aparelho de som estão se fundindo em um único aparelho.
+            Além disso, o MP3 por ser tão democrático, deverá continuar com força total e o som surround provavelmente tomará
+            o lugar do som estéreo.</p>
 
           <h3> Representação de Áudio Digital</h3>
           <p>É preciso entendermos que o áudio digital é obtido principalmente a partir da digitalização do áudio analógico.</p>
           <p> O áudio digital é constituído por um grande número de pedaços de informação designados por amostra. Cada amostra
             contém informação sobre a amplitude (ou volume sonoro) de um som e num dado instante.</p>
+          <p>Os gravadores de áudio analógicos funcionam captando o som do ambiente por meio das vibrações do ar(Ondas contínuas).
+            (O ar que propaga as ondas do som). O microfone capta as ondas e envia para as fitas, as fitas gravam o som em
+            forma de onda, a onda pode ser interpretada e reproduzida em forma de onda contínua. O áudio digital capta uma
+            amostragem das ondas contínuas e basicamente enumera e converte os picos, tornando os como uma escada e não como
+            uma onda. Quanto mais pontos a escada digital possuir mais parecido será com as ondas contínuas. A qualidade
+            do som é proporcional a qualidade de codificação de ondas contínuas para escadas digitais enumeradas.</p>
 
         </div>
 
@@ -357,28 +402,101 @@
     </section>
 
     <section id="screenshot" class="section">
-        <div class="container">
-            <!-- Carousel -->
-            <div class="col-md-12">
-              <div class="row">
-                <div class="col-md-6">
-                  <h2>Jogos</h2>
-                  <div class=" wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
-                    Colocar Jogo
+      <div class="container">
+        <!-- Carousel -->
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6">
+              <h2>Jogos</h2>
+              <div class=" wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
+                <!--audio id="clearsound" src="sound/pop.ogg" preload="auto"></audio>
+                  <canvas- width='300' height='600'></canvas-->
+
+                <!-- INICIO JOGO 2048-->
+
+                <div class="heading">
+                  <div class="scores-container">
+
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <h2>Animação</h2>
-                  <div class=" wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
-                   Colocar Animação
+
+                <div class="above-game">
+                  <div class="score-container">0</div>
+                  <div class="best-container">0</div>
+                  <a class="restart-button">Novo Jogo</a>
+                </div>
+
+                <div class="game-container">
+                  <div class="game-message">
+                    <p></p>
+                    <div class="lower">
+                      <a class="keep-playing-button">Continue</a>
+                      <a class="retry-button">
+                          Tente novamente</a>
+                    </div>
+                  </div>
+
+                  <div class="grid-container">
+                    <div class="grid-row">
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                    </div>
+                    <div class="grid-row">
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                    </div>
+                    <div class="grid-row">
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                    </div>
+                    <div class="grid-row">
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                      <div class="grid-cell"></div>
+                    </div>
+                  </div>
+
+                  <div class="tile-container">
+
                   </div>
                 </div>
+
+                <p class="game-explanation">
+                  <strong class="important">Para Jogar:</strong> Use as <strong>setas</strong> para mover as peças. Quando
+                  dois azulejos com o mesmo número tocam, eles <strong> se fundem em um!</strong>
+                </p>
+                <p>
+                  Criado por <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Baseado em <a href="https://itunes.apple.com/us/app/1024!/id823499224"
+                    target="_blank">1024 by Veewo Studio</a> e conceitualmente semelhante a <a href="http://asherv.com/threes/"
+                    target="_blank">Threes by Asher Vollmer.</a>
+                </p>
+                <-->
               </div>
+
+              <!-- FIM JOGO 2048-->
             </div>
-            <div class="socialico ">
-              <a href="#imagemDesc" class="infor socialbtn"> <i class="fa fa-info" aria-hidden="true"></i>  informações</a>
+            <div class="col-md-6">
+              <h2>Animação</h2>
+              <div class=" wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
+                <div class="the-goods">WIKIMIDIA</div>
+
+              </div>
+
             </div>
           </div>
+        </div>
+      </div>
+      <div class="socialico ">
+        <a href="#imagemDesc" class="infor socialbtn"> <i class="fa fa-info" aria-hidden="true"></i>  informações</a>
+      </div>
+      </div>
 
     </section>
 
@@ -389,172 +507,68 @@
           <div class="icon hi-icon-effect-3b">
             <div class="col-md-6 col-sm-6 wow fadeInUp desc" data-wow-duration="1000ms" data-wow-delay="400ms">
               <div class="features-content">
-                <h3>Imagens</h3>
-                <p>&nbsp; &nbsp; De acordo com a Wikipédia, uma imagem digital é uma representação de uma imagem bidimensional
-                  convertida em números binários codificados permitindo seu processamento, armazenamento, transferência,
-                  reprodução e impressão por meio de dispositivos eletrônicos como smartphones, notebooks, desktops e outros.</p>
-                <p>Dispositivos de capturas de imagens Tanto as câmeras digitais quanto as analógicas funcionam do mesmo modo.
-                  Ambas possuem lentes para focalizar a luz e reproduzir uma cena. A diferença está em como é feito a captação
-                  da luz e o registro das cenas.
+                <h3>Jogos</h3>
+                <p>&nbsp; &nbsp;Na década de 1960, o Instituto de Tecnologia de Massachusetts era um dos principais centros
+                  de pesquisa na área da computação no mundo e dispunha do TX-0, um computador dotado de transistores, ao
+                  invés de válvulas, e que era menor que os mainframes padrão da época.</p>
+                <p>O computador logo atraiu um grupo de estudantes de engenharia, que passaram a desenvolver nele ferramentas
+                  de programação, além de jogos simples, como Mouse in the Maze (que simulava um rato em um labirinto) e
+                  Tic-Tac-Toe (o jogo da velha). O TX-0 logo foi substituído pelo PDP-1, minicomputador que possuía um monitor
+                  com resolução de 512 x 512 e capacidade de plotar qualquer ponto na tela.
                 </p>
-                <p> As câmeras analógicas possui o “film”, que basicamente é uma película que possui partículas de cristais de
-                  prata que reage às diferentes intensidades da luz.As câmeras digitais funcionam a base de sensores de luz
-                  que converte a informação recebida em bit (Código binário - interpretado por computadores).</P>
-                <h4><b>  Primeiro dispositivo para a captação de luz analógico foi o Daguerreótipo, criado em 1837 em escala comercial por
-                    Louis Jacques Mandé Daguerre.</b> </h4>
-              </div>
-              <div class="features-content">
-                <img src="imagens/carrossel/Imagem1.jpg" style="width:100%">
-              </div>
-              <h4><b>
-                  Primeiro dispositivo para a captação de luz digital(Câmera digital - Kodak) foi a Kodak Sasson criado em 1975 pelo engenheiro
-                  Steven Sasson.
-                </b> </h4>
-              <div class="features-content">
-                <img src="imagens/carrossel/Imagem2.jpg" style="width:100%">
-              </div>
-              <div class="features-content">
-                <p>&nbsp; &nbsp;Toda imagem digital é feita de pixels(Picture Element - Elemento da imagem) que são pequenos
-                  pontos que se agrupam para formar uma imagem. Basicamente existe três modelos de cores conhecidos que são:
-                  <ul>
-                    <li>●RGB (Red, Green e Blue)</li>
-                    <li>●CMY (Cian, Magenta e Yellow)</li>
-                    <li>● HLS (Hue-luminance-saturation/matiz-luminância-saturação)</li>
-                  </ul>
-                  <h4><b>Abaixo o modelo RGB e CMY são explicados:</b></h4>
-                  <p>&nbsp; &nbsp; Basicamente os computadores digitais utilizam um padrão de cor chamado RGB (Red, Green e
-                    Blue) ou também conhecido como sistema aditivo RGB e por meio desse padrão é feito várias combinações
-                    de cores através das cores base do modelo (red,green e blue).</P>
-                  <p>Os computadores basicamente precisam codificar em binário no padrão RGB cada pixels que existe em uma imagem,
-                    ou seja se uma imagem possui 200x200 Pixels, ele precisa converter 40000 pixels em código binário para
-                    interpretar a informação.</p>
-                  <p> Ex.: A cor amarela no padrão RGB é representado pela combinação da intensidade das três cores. 253-Red,
-                    255-Green e 45-Blue.
-                    <p> Cada intensidade de cor é codificada para binário 1111101-Red, 1111111-Green e 101110-Blue . Cada pixel
-                      de uma imagem possui três bytes devido ao modelo RGB.</p>
-                    <p> O tamanho de uma foto digital depende da quantidade de pixels que ela tem, quanto maior a quantidade
-                      de pixels maior será a qualidade da imagem e seu tamanho em bytes.
-                      <p>As imagens em preto e branco são mais simples, o computador basicamente define precisa definir os bits
-                        para cada intensidade, branco(1) e preto(0). </p>
-                      <p> O modelo CMY é formado a partir das cores complementares do modelo RGB, as cores complementares das
-                        cores primárias são ciano(turquesa), magenta(púrpura e o amarelo.</p>
-                      <p>São as cores básicas utilizadas na mistura de pigmentos, que é a base dos processos coloridos de impressão
-                        e fotografia.</p>
-                      <p>Na prática usa-se uma variante que é o modelo CMYB que adiciona o preto, quarto pigmento básico. Ex.:
-                        Impressoras de jato de tinta. </p>
-              </div>
-              <div class="features-content">
+                <p> Decididos a explorar o novo hardware, Steve Russell e seus colegas criaram um jogo em que se controlava duas
+                  naves espaciais e cujo objetivo dos jogadores era acertar torpedos uns nos outros.</P>
+                <br>
+                <h4><b>Jogo das Naves</b></h4>
                 <div class="features-content">
-                  <img src="imagens/carrossel/Imagem3.jpg" style="width:100%">
+                  <img src="imagens/JogosAnimacao/Imagem3.png" style="width:100%">
                 </div>
-                <p>
-                  <h4><b> Resolução</b></h4>
-                  <p>A resolução de uma imagem é definida pela quantidade de pixels(linhas x coluna) que ela tem Ex.:
-                    <ul>
-                      <li>●O olho humano possui um campo visual de 3000 x 3000 pixels.</li>
-                      <li>●Fotográfia: 8000 x 8000 pixels. </li>
-                      <li>●Televisão comum: 512 x 480 pixels. </li>
-                      <li>●Televisão digital (HDTV): 1920 x 1080 pixels. </li>
-                      <li>●Os computadores definem a resolução gráfica com base no hardware gráfico disponível. (Placa de vídeo),
-                        quanto mais potente o placa de vídeo for maior resolução que ela irá proporcionar. </li>
-                    </ul>
-                  </p>
-                  <h4><b> Extensões</b></h4>
-                  <p> As extensões mais comuns de imagens utilizadas nos dias de são:
-                    <ul>
-                      <li>●PCX - Usado nos aplicativos DOS.</li>
-                      <li>●GIF - Usado para distribuição de imagens com compressão sem perdas. Suporta animação. Limite de 256
-                        cores.
-                      </li>
-                      <li>●BMP - Usado em arquivos grandes, é o padrão fundamental do Windows. </li>
-                      <li>●TIFF - Extensão de padrão independente, pode ser usada para imagens de alta resolução espacial e em
-                        cores. Pode usar compressão com ou sem perdas. </li>
-                      <li>●JPEG - Inicialmente seu uso foi direcionado para imagens fotográficas da grande maioria das câmeras
-                        digitais. Hoje sem dúvida é a extensão mais utilizada suportando compressão com perdas e sem perdas.</li>
-                      <li>●PNG - Alternativa para o formato GIF, suporta compressão sem perdas. </li>
-                    </ul>
-                  </p>
-              </div>
-              <div>
-                <center>
-                  <a href="http://iphotochannel.com.br/historia-da-fotografia/as-20-primeiras-fotos-da-historia-da-fotografia" target="_blank">
-                    <h3>Saíba Mais</h3>
-                  </a>
-                </center>
+                <br>
+                <p>Em 30 de julho de 1961, era testado pela primeira vez Spacewar!,finalizado oficialmente em 1962 e ocupando
+                  apenas 2 kB de memória foi considerado o primeiro jogo eletrônico de tiro da história.</P>
+                <br>
+                <h4><b>Spacewar</b></h4>
+                <div class="features-content">
+                  <img src="imagens/JogosAnimacao/Imagem4.png" style="width:100%">
+                </div>
+                <br>
+                <br>
+                <br>
+                <div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="icon hi-icon-effect-3b">
-            <div class="col-md-6 col-sm-6 wow fadeInUp desc" data-wow-duration="1000ms" data-wow-delay="1200ms">
-              <div class="features-content">
-                <h3>Desenhos</h3>
-                <p>&nbsp; &nbsp;O desenho é a arte de representar, ou criar formas, utilizando materiais como lápis, carvão,
-                  pincel. Diferencia-se da pintura e da gravura, por ser considerado tanto como processo quanto como resultado
-                  artístico, uma obra bidimensional composta por linhas, pontos e formas. Na pintura a superfície é marcada
-                  por lápis, caneta, pincel, os movimentos dão origem aos pontos, linhas e formas planas. </p>
+            <div class="icon hi-icon-effect-3b">
+              <div class="col-md-6 col-sm-6 wow fadeInUp desc" data-wow-duration="1000ms" data-wow-delay="1200ms">
                 <div class="features-content">
-                  <img src="imagens/carrossel/des2.jpg" style="width:100%">
+                  <h3>Animação</h3>
+                  <p>&nbsp; &nbsp;1820-1825: William Fitton inventa o taumatrópio, um aparelho óptico que, baseado na persistência
+                    das imagens na retina, dá a ilusão da combinação de duas figuras distintas postas em movimento. </p>
+                  <p>1832: Joseph Antoine Ferdinand Plateau inventou o fenaquistoscópio (também escrito phenakistiscope) era
+                    um dispositivo de animação inicial que usou o princípio da persistência de visão para criar uma ilusão
+                    de movimento. O phenakistoscope é o precursor do zootrópio.
+                  </p>
+                  <div class="features-content">
+                    <img src="imagens/JogosAnimacao/Imagem1.png" style="width:100%">
+                  </div>
+                  <p>1891 (data da patente): Thomas Edson invetou o cinetoscópio, que permitia a observação através de um furo,
+                    e foi o precursor de todos os subsequentes aparelhos de filmar, passando a largura do seu filme para
+                    35mm a ser considerada internacionalmente.</P>
                 </div>
-                <p>Outro aspecto que diferencia o desenho da pintura, é que no primeiro não há mistura de cores antes da aplicação,
-                  essas são utilizadas puras, enquanto na pintura as cores são misturadas para dar origem a outras novas.
-                </p>
-
-                <p> Existem várias técnicas de desenho, e a escolha dos materiais utilizados está relacionada com a mesma. </P>
-                <p> O desenho existe desde a Pré-História, como forma de manifestação estética e linguagem expressiva, porém
-                  obteve status de arte durante a Idade Média. </P>
+                <p>&nbsp; &nbsp; 1895 (data da patente): é criado o cinematógrafo que é considerado geralmente como um aperfeiçoamento
+                  feito pelos irmãos Lumière do cinetoscópio de Thomas Edison.</p>
+                <h4><b>Branca de Neve</b></h4>
+                <p>&nbsp; &nbsp; 1934-1937: É o primeiro longa-metragem de animação, dos estúdios Disney, e é baseado no conto
+                  de fadas “Branca de Neve”, dos irmãos Grimm.</p>
                 <div class="features-content">
-                  <img src="imagens/carrossel/des3.jpg" style="width:100%">
+                  <img src="imagens/JogosAnimacao/Imagem2.png" style="width:100%">
                 </div>
-                <p> O desenho possibilitou o estudo da figura humana. Desde o final do século XIX, os desenhos eram bastante
-                  utilizados em publicidade. </P>
-                <p> As possibilidades técnicas da arte do desenho foram ampliadas nas últimas décadas do século XX, com o computador
-                  que disponibiliza programas como o Corel Draw, Adobe Illustrator e outros. </P>
+                <br>
+                <br>
               </div>
-              <h4><b>Desenho, gravura, pintura.</b></h4>
-              <p>&nbsp; &nbsp; Entre os suportes artísticos tradicionais, três deles manifestam-se em duas dimensões: o próprio
-                desenho, a gravura e a pintura. Embora o resultado formal de cada um deles seja bastante diferente (embora
-                o desenho e a gravura sejam similares), a grande diferença entre eles se encontra na técnica envolvida.</P>
-              <p>A gravura difere do desenho na medida em que ela é produzida pensando-se na sua impressão e reprodução. Seus
-                meios mais comuns de confecção são a xilogravura (em que a matriz é feita de madeira), a litogravura (cuja
-                matriz é composta de algum tipo de pedra), a gravura propriamente dita (cuja matriz é metálica) e a Serigrafia
-                (cuja matriz é uma tela) uma técnica de imprimir sobre tecido. Existe ainda uma técnica chamada monotipia,
-                mais próxima da pintura, na qual se obtem apenas uma impressão.</p>
-              <div class="features-content">
-                <img src="imagens/carrossel/des7.jpg" style="width:100%">
-              </div>
-              <h4><b>Desenho Vetorial</b></h4>
-              <p>&nbsp; &nbsp; Desenho vetorial é o uso de primitivas geométricas como pontos, linhas, curvas e formas ou polígonos
-                - todos os quais são baseados em expressões matemáticas - para representar imagens em computação gráfica.
-                Os desenhos vetoriais são baseados em vetores (também chamados de caminhos), que conduzem através de locais
-                chamados pontos de controle ou nós. Cada um desses pontos possui uma posição definida nos eixos x e y do
-                plano de trabalho e determinam a direção do caminho. Além disso, a cada caminho pode ser atribuído uma cor
-                de traço, forma, espessura e preenchimento. Estas propriedades não aumentam o tamanho dos arquivos de desenho
-                vetorial de maneira substancial, uma vez que todas as informações residem na estrutura do documento, que
-                apenas descreve como o vetor deve ser desenhado.</P>
-              <p>Ele é um tipo de imagem gerada a partir de descrições geométricas de formas, diferente das imagens chamadas
-                mapa de bits, ou raster, que são geradas a partir de pontos minúsculos diferenciados por suas cores. Uma
-                imagem vetorial normalmente é composta por curvas, elipses, polígonos, texto, entre outros elementos paramétricos,
-                isto é, utilizam vetores matemáticos para sua descrição.</p>
-              <div class="features-content">
-                <img src="imagens/carrossel/vet4.jpg" style="width:50%" alt="Vetor Angelina Jolie">
-              </div>
-              <h4><b> Formatos comuns de imagem vetorial</b></h4>
-              <p>A resolução de uma imagem é definida pela quantidade de pixels(linhas x coluna) que ela tem Ex.:
-                <ul>
-                  <li>●SVG Padrão para gráficos vetoriais recomendado pela W3C.</li>
-                  <li>●CDR Formato proprietário da Corel(C). </li>
-                  <li>●AI Formato Adobe Illustrator. </li>
-                  <li>●ESS. </li>
-                  <li>●EPS (Encapsulated Post Script) - formato e linguagem criada pela Adobe, e que pode conter informação vetorial
-                    e rasterizada no mesmo arquivo. </li>
-                  <li>●CNX. </li>
-                  <li>●WMF Windows Meta File (Meta-arquivo do Windows). </li>
-                </ul>
-              </p>
             </div>
           </div>
         </div>
-      </div>
     </section>
 
     <!--div class="wrap">
@@ -992,45 +1006,124 @@
 
     <section id="tvideo" class="section">
       <div class="container">
-        <div class="section-header text-center wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">
-          <h1 class="section-title">What People Says</h1>
-          <h2 class="section-subtitle">Material UI Bootstrap APP and Business Template</h2>
-        </div>
-        <div class="row">
-          <div class="col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
-            <div id="tvideo-carousel" class="carousel slide" data-ride="carousel">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#tvideo-carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#tvideo-carousel" data-slide-to="1"></li>
-                <li data-target="#tvideo-carousel" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="item active text-center">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod dolor sit amet, consectetur adipisicing
-                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud
-                  </p>
-                  <div class="meta">
-                    <p>Web excutive <span><a href="http://wingthemes.com/">WingThemes</a></span></p>
-                  </div>
+        <!-- Carousel -->
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-7">
+              <h2>Vídeo</h2>
+              <div class="row albuns">
+                <div class="col-md-6">
+                  <video controls src="video/video01.mp4" width="326" height="140">
+                    <p>Seu nevegador não suporta o elemento video.</p>
+                  </video>
                 </div>
-                <div class="item text-center">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod dolor sit amet, consectetur adipisicing
-                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud
-                  </p>
-                  <div class="meta">
-                    <p>Web excutive <span><a href="http://graygrids.com/">GrayGrids</a></span></p>
-                  </div>
+                <div class="col-md-6">
+                  <video controls src="video/video02.mp4" width="326" height="140">
+                    <p>Seu nevegador não suporta o elemento video.</p>
+                  </video>
                 </div>
-                <div class="item text-center">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod dolor sit amet, consectetur adipisicing
-                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud
-                  </p>
-                  <div class="meta">
-                    <p>Web excutive <span><a href="http://landingbow.com/">LandinBow</a></span></p>
+              </div>
+              <div class="row albuns">
+                <div class="col-md-6">
+
+                  <video controls src="video/video03.mp4" width="326" height="140">
+                    <p>Seu nevegador não suporta o elemento video.</p>
+                  </video>
+
+                </div>
+                <div class="col-md-6">
+
+                  <video controls src="video/video04.mp4" width="326" height="140">
+                    <p>Seu nevegador não suporta o elemento video.</p>
+                  </video>
+
+                </div>
+
+              </div>
+            </div>
+            <div class="col-md-5">
+              <h2>Tv</h2>
+              <div class=" wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
+                <div class=" wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
+                  <div id="t-tv" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#t-tv" data-slide-to="0" class="active"></li>
+                      <li data-target="#t-tv" data-slide-to="1"></li>
+                      <li data-target="#t-tv" data-slide-to="2"></li>
+                      <li data-target="#t-tv" data-slide-to="3"></li>
+                      <li data-target="#t-tv" data-slide-to="4"></li>
+                      <li data-target="#t-tv" data-slide-to="5"></li>
+                      <li data-target="#t-tv" data-slide-to="6"></li>
+                      <li data-target="#t-tv" data-slide-to="7"></li>
+                      <li data-target="#t-tv" data-slide-to="8"></li>
+                      <li data-target="#t-tv" data-slide-to="9"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="item active text-center">
+                        <img src="tv/tv1930.png" style="width:100%">
+
+                        <div class="carousel-caption ">
+                          <h3>Ano 1930</h3>
+                        </div>
+                      </div>
+                      <div class="item text-center">
+                        <img src="tv/tv1940.png" style="width:100%">
+                        <div class="carousel-caption">
+                          <h3>Ano 1940</h3>
+                        </div>
+                      </div>
+                      <div class="item text-center">
+                        <img src="tv/tv1950.png" style="width:100%">
+                        <div class="carousel-caption">
+                          <h3>Ano 1950</h3>
+                        </div>
+                      </div>
+                      <div class="item text-center">
+                        <img src="tv/tv1960.png" style="width:100%">
+                        <div class="carousel-caption">
+                          <h3>Ano 1960</h3>
+                        </div>
+                      </div>
+                      <div class="item text-center">
+                        <img src="tv/tv1970.png" style="width:100%">
+                        <div class="carousel-caption">
+                          <h3>Ano 1970</h3>
+                        </div>
+                      </div>
+                      <div class="item text-center">
+                        <img src="tv/tv1980.png" style="width:100%">
+                        <div class="carousel-caption">
+                          <h3>Ano 1980</h3>
+                        </div>
+                      </div>
+                      <div class="item text-center">
+                        <img src="tv/tv1990.png" style="width:100%">
+                        <div class="carousel-caption">
+                          <h3>Ano 1990</h3>
+                        </div>
+                        </h4>
+                      </div>
+                      <div class="item text-center">
+                        <img src="tv/tv2000.png" style="width:100%">
+                        <div class="carousel-caption">
+                          <h3>Ano 2000</h3>
+                        </div>
+                      </div>
+                      <div class="item text-center">
+                        <img src="tv/tv2012.png" style="width:100%">
+                        <div class="carousel-caption">
+                          <h3>Ano 2012</h3>
+                        </div>
+                      </div>
+                      <div class="item text-center">
+                        <img src="tv/tv2013.png" style="width:100%">
+                        <div class="carousel-caption">
+                          <h3>Ano 2013</h3>
+                        </div>
+                      </div>
+
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1038,100 +1131,162 @@
           </div>
         </div>
         <div class="socialico ">
-          <a href="#videoDesc" class="infor socialbtn"> <i class="fa fa-info" aria-hidden="true"></i>  informações</a>
+          <a href="#imagemDesc" class="infor socialbtn"> <i class="fa fa-info" aria-hidden="true"></i>  informações</a>
         </div>
       </div>
     </section>
 
     <section id="videoDesc">
       <div class="container">
-        <div class="section-header">
-          <h1 class="section-title wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Tv & Video</h1>
-          <h2 class="section-subtitle wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms">Who seeks after it and wants to have it</h2>
-        </div>
         <div class="row">
-          <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
-            <div class="features-content">
-              <div class="icon hi-icon-effect-3b">
-                <i class="mdi-action-settings"></i>
+          <div class="icon hi-icon-effect-3b">
+            <div class="col-md-6 col-sm-6 wow fadeInUp desc" data-wow-duration="1000ms" data-wow-delay="400ms">
+              <div class="features-content">
+                <h3>Imagens</h3>
+                <p>&nbsp; &nbsp; De acordo com a Wikipédia, uma imagem digital é uma representação de uma imagem bidimensional
+                  convertida em números binários codificados permitindo seu processamento, armazenamento, transferência,
+                  reprodução e impressão por meio de dispositivos eletrônicos como smartphones, notebooks, desktops e outros.</p>
+                <p>Dispositivos de capturas de imagens Tanto as câmeras digitais quanto as analógicas funcionam do mesmo modo.
+                  Ambas possuem lentes para focalizar a luz e reproduzir uma cena. A diferença está em como é feito a captação
+                  da luz e o registro das cenas.
+                </p>
+                <p> As câmeras analógicas possui o “film”, que basicamente é uma película que possui partículas de cristais de
+                  prata que reage às diferentes intensidades da luz.As câmeras digitais funcionam a base de sensores de luz
+                  que converte a informação recebida em bit (Código binário - interpretado por computadores).</P>
+                <h4><b>  Primeiro dispositivo para a captação de luz analógico foi o Daguerreótipo, criado em 1837 em escala comercial por
+                Louis Jacques Mandé Daguerre.</b> </h4>
               </div>
-              <h3>Customization</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text</p>
+              <div class="features-content">
+                <img src="imagens/carrossel/Imagem1.jpg" style="width:100%">
+              </div>
+              <h4><b>
+              Primeiro dispositivo para a captação de luz digital(Câmera digital - Kodak) foi a Kodak Sasson criado em 1975 pelo engenheiro
+              Steven Sasson.
+            </b> </h4>
+              <div class="features-content">
+                <img src="imagens/carrossel/Imagem2.jpg" style="width:100%">
+              </div>
+              <div class="features-content">
+                <p>&nbsp; &nbsp;Toda imagem digital é feita de pixels(Picture Element - Elemento da imagem) que são pequenos
+                  pontos que se agrupam para formar uma imagem. Basicamente existe três modelos de cores conhecidos que são:
+                  <ul>
+                    <li>●RGB (Red, Green e Blue)</li>
+                    <li>●CMY (Cian, Magenta e Yellow)</li>
+                    <li>● HLS (Hue-luminance-saturation/matiz-luminância-saturação)</li>
+                  </ul>
+                  <h4><b>Abaixo o modelo RGB e CMY são explicados:</b></h4>
+                  <p>&nbsp; &nbsp; Basicamente os computadores digitais utilizam um padrão de cor chamado RGB (Red, Green e
+                    Blue) ou também conhecido como sistema aditivo RGB e por meio desse padrão é feito várias combinações
+                    de cores através das cores base do modelo (red,green e blue).</P>
+                  <p>Os computadores basicamente precisam codificar em binário no padrão RGB cada pixels que existe em uma imagem,
+                    ou seja se uma imagem possui 200x200 Pixels, ele precisa converter 40000 pixels em código binário para
+                    interpretar a informação.</p>
+                  <p> Ex.: A cor amarela no padrão RGB é representado pela combinação da intensidade das três cores. 253-Red,
+                    255-Green e 45-Blue.
+                    <p> Cada intensidade de cor é codificada para binário 1111101-Red, 1111111-Green e 101110-Blue . Cada pixel
+                      de uma imagem possui três bytes devido ao modelo RGB.</p>
+                    <p> O tamanho de uma foto digital depende da quantidade de pixels que ela tem, quanto maior a quantidade
+                      de pixels maior será a qualidade da imagem e seu tamanho em bytes.
+                      <p>As imagens em preto e branco são mais simples, o computador basicamente define precisa definir os bits
+                        para cada intensidade, branco(1) e preto(0). </p>
+                      <p> O modelo CMY é formado a partir das cores complementares do modelo RGB, as cores complementares das
+                        cores primárias são ciano(turquesa), magenta(púrpura e o amarelo.</p>
+                      <p>São as cores básicas utilizadas na mistura de pigmentos, que é a base dos processos coloridos de impressão
+                        e fotografia.</p>
+                      <p>Na prática usa-se uma variante que é o modelo CMYB que adiciona o preto, quarto pigmento básico. Ex.:
+                        Impressoras de jato de tinta. </p>
+              </div>
+              <div class="features-content">
+                <div class="features-content">
+                  <img src="imagens/carrossel/Imagem3.jpg" style="width:100%">
+                </div>
+                <p>
+                  <h4><b> Resolução</b></h4>
+                  <p>A resolução de uma imagem é definida pela quantidade de pixels(linhas x coluna) que ela tem Ex.:
+                    <ul>
+                      <li>●O olho humano possui um campo visual de 3000 x 3000 pixels.</li>
+                      <li>●Fotográfia: 8000 x 8000 pixels. </li>
+                      <li>●Televisão comum: 512 x 480 pixels. </li>
+                      <li>●Televisão digital (HDTV): 1920 x 1080 pixels. </li>
+                      <li>●Os computadores definem a resolução gráfica com base no hardware gráfico disponível. (Placa de vídeo),
+                        quanto mais potente o placa de vídeo for maior resolução que ela irá proporcionar. </li>
+                    </ul>
+                  </p>
+                  <h4><b> Extensões</b></h4>
+                  <p> As extensões mais comuns de imagens utilizadas nos dias de são:
+                    <ul>
+                      <li>●PCX - Usado nos aplicativos DOS.</li>
+                      <li>●GIF - Usado para distribuição de imagens com compressão sem perdas. Suporta animação. Limite de 256
+                        cores.
+                      </li>
+                      <li>●BMP - Usado em arquivos grandes, é o padrão fundamental do Windows. </li>
+                      <li>●TIFF - Extensão de padrão independente, pode ser usada para imagens de alta resolução espacial e em
+                        cores. Pode usar compressão com ou sem perdas. </li>
+                      <li>●JPEG - Inicialmente seu uso foi direcionado para imagens fotográficas da grande maioria das câmeras
+                        digitais. Hoje sem dúvida é a extensão mais utilizada suportando compressão com perdas e sem perdas.</li>
+                      <li>●PNG - Alternativa para o formato GIF, suporta compressão sem perdas. </li>
+                    </ul>
+                  </p>
+              </div>
+              <div>
+                <center>
+                  <a href="http://iphotochannel.com.br/historia-da-fotografia/as-20-primeiras-fotos-da-historia-da-fotografia" target="_blank">
+                    <h3>Saíba Mais</h3>
+                  </a>
+                </center>
+              </div>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-            <div class="features-content">
-              <div class="icon">
-                <i class="mdi-action-lock-outline"></i>
+          <div class="icon hi-icon-effect-3b">
+            <div class="col-md-6 col-sm-6 wow fadeInUp desc" data-wow-duration="1000ms" data-wow-delay="1200ms">
+              <div class="features-content">
+                <h3>Historia da TV</h3>
+                <h4><b>O Lançamento dos Primeiros Protótipos de TV</b></h4>
+                <p>Na década de 1920, surgem os primeiros modelos de televisores. Eles eram feitos em madeira, com um design
+                  muito parecido com os rádios da época. A imagem era em preto e branco e o som era um pouco atrasado. Além
+                  disto, os modelos iniciais precisavam de um período para “esquentar” antes de iniciar seu funcionamento.
+                </p>
+                <h4><b>A Produção da TV em Larga Escala</b></h4>
+                <p>Em 1930, as TVs começam a ser produzidas em larga escala. Porém, devido ao seu preço bastante alto na época,
+                  o rádio ainda era o meio de comunicação predominante e poucas pessoas tinham acesso à nova tecnologia.
+                </p>
+                <h4><b>O Crescimento da TV no Mundo</b></h4>
+                <p>Uma das primeiras grandes transmissões através da TV foi a das Olimpíadas de Berlim, em 1936. Após a 2ª Guerra
+                  Mundial, o uso da TV aumentou consideravelmente e continuou a crescer. Hoje, ela é um dos eletroeletrônicos
+                  mais presentes nas casas do mundo todo. A partir dos anos 1950, a televisão passa a ser colorida e inicia-se
+                  o uso do controle remoto. </p>
+                <h4><b>A TV no Brasil</b></h4>
+                <p>Também na década de 1950, a TV chega ao Brasil, ainda em preto e branco e com uma tecnologia bastante precária.
+                  Após isto, foi inaugurada a primeira emissora brasileira de televisão, a TV Tupi, criada por Assis Chateaubriand.
+                  Logo, a TV se popularizou e encantou aos brasileiros, chegando à marca expressiva de 1,5 milhões de aparelhos.
+                </p>
+                <h4><b>A Evolução da Televisão no Brasil</b></h4>
+                <p>A evolução da televisão no Brasil iniciou-se com a primeira transmissão a cores só aconteceu em 1970, durante
+                  a Copa do Mundo. Mas, como foi em caráter experimental, poucos telespectadores puderam participar da experiência.
+                </p>
+                <h4><b>A Evolução da TV no Mundo</b></h4>
+                <p>Com a evolução tecnológica, as TVs foram se aprimorando cada vez mais e se popularizando no Brasil e no mundo.
+                  Enquanto na década de 20 a resolução delas era baixíssima (mais ou menos 60 linhas), a última geração fabricada
+                  de TVs analógicas, por exemplo, possuía uma resolução de, aproximadamente, 480 linhas. O tempo passou,
+                  e novos aparelhos foram surgindo, com telas cada vez mais amplas, maior qualidade, bem mais finas e leves,
+                  além do som estéreo.</p>
+                <p>Com o surgimento da TV de tela plana e, posteriormente, da TV de plasma e da TV LCD, as imagens ganharam
+                  cada vez mais qualidade. A utilização de satélites de transmissão e equipamentos transmissores mais modernos
+                  também contribuiu muito para a melhoria das imagens. </p>
+                <h4><b>A Chegada da TV Digital</b></h4>
+                <p>Desde o surgimento da TV no mundo até pouco antes de ocorrer a evolução da televisão para a tecnologia digital,
+                  pouca coisa havia mudado no método de transmissão. Hoje, com a TV digital, a imagem e o som melhoraram
+                  consideravelmente, além de permitir maior interatividade. </p>
+                <p>Nos últimos anos, a TV se tornou HD, ou seja, de alta definição, chegando a uma resolução de até 1080 linhas.
+                  Inclusive, hoje, a TV HD oferece ao telespectador várias tecnologias já incluídas de fábrica, como o 3D,
+                  a conexão com a internet, opções de aplicativos e recursos multimídia, entre outros. </p>
+                <p>Através do aprimoramento de outros aparelhos, como os celulares, possibilitou que estes também se tornassem
+                  um meio de se assistir televisão. Agora é esperar que mais evoluções e novas tecnologias melhorem ainda
+                  mais o eletroeletrônico mais queridinho do Brasil e nos possibilite novas experiências visuais.</p>
               </div>
-              <h3>Security</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="800ms">
-            <div class="features-content">
-              <div class="icon">
-                <i class="mdi-file-cloud-queue"></i>
-              </div>
-              <h3>Cloud</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="1000ms">
-            <div class="features-content">
-              <div class="icon">
-                <i class="mdi-social-person-outline"></i>
-              </div>
-              <h3>Analtyics</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="1200ms">
-            <div class="features-content">
-              <div class="icon">
-                <i class="mdi-action-grade"></i>
-              </div>
-              <h3>Performance</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="1400ms">
-            <div class="features-content">
-              <div class="icon">
-                <i class="mdi-content-flag"></i>
-              </div>
-              <h3>Network</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="1600ms">
-            <div class="features-content">
-              <div class="icon">
-                <i class="mdi-communication-messenger"></i>
-              </div>
-              <h3>Support</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="1800ms">
-            <div class="features-content">
-              <div class="icon">
-                <i class="mdi-action-settings-power"></i>
-              </div>
-              <h3>Easy</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text</p>
             </div>
           </div>
         </div>
-      </div>
     </section>
 
     <section id="hipermidia" class="section">
@@ -1366,7 +1521,12 @@
                   </li>
                   <li>Livro: PAULA FILHO, Wilson de Pádua. Multimídia: conceitos e aplicações. 2. ed. Rio de Janeiro: LTC, Valinhos:
                     Anhanguera Educacional, 2011. 368 p. (Programa do Livro-Texto 2011 ; 398). ISBN 9788521618836.</li>
-                  <li></li>
+                  <li>
+                      <a href=" https://www.ciawebsites.com.br/geral/a-evolucao-da-tv/" target="_blank">
+                        <h4>CIAWebsites</h4>
+                      </a>
+                     
+                  </li>
                   <li></li>
                   <li></li>
                   <li></li>
@@ -1411,6 +1571,24 @@
     <script src="js/smooth-on-scroll.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/anima.js"></script>
+    <!--INICIO JOGO TETRIS-->
+    <script src='js/tetris.js'></script>
+    <script src='js/controller.js'></script>
+    <script src='js/render.js'></script>
+
+    <!--INICIO JOGO 2048-->
+    <script src="js/2048/bind_polyfill.js"></script>
+    <script src="js/2048/classlist_polyfill.js"></script>
+    <script src="js/2048/animframe_polyfill.js"></script>
+    <script src="js/2048/keyboard_input_manager.js"></script>
+    <script src="js/2048/html_actuator.js"></script>
+    <script src="js/2048/grid.js"></script>
+    <script src="js/2048/tile.js"></script>
+    <script src="js/2048/local_storage_manager.js"></script>
+    <script src="js/2048/game_manager.js"></script>
+    <script src="js/2048/application.js"></script>
+
 
     <script type="text/javascript">
       var oldAud = null;
